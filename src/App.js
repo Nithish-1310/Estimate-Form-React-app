@@ -55,7 +55,7 @@ const Form = () => {
 
     if (selectedDate < minDate) {
       toast.error("Estimate date cannot be in the past.");
-      setEstimateDate(currentDateString); // Reset to current date
+      setEstimateDate(currentDateString); // will Reset to current date
     } else {
       setEstimateDate(selectedDate.toISOString().split("T")[0]);
     }
@@ -92,13 +92,13 @@ const Form = () => {
       isNaN(size) ||
       isNaN(amount)
     ) {
-      // Show error toast
+      // will Show error toast
       return toast.error(
         "Please fill in all required fields with valid values."
       );
     }
 
-    // Save to Firebase
+    // will Save to Firebase - Firestore Database
     addDoc(collection(db, "your_collection_name"), {
       yard,
       customerName,
@@ -119,9 +119,9 @@ const Form = () => {
       remarks,
     })
       .then(() => {
-        // Show success toast
+        // will Show success toast
         toast.success("Data saved successfully!");
-        // Reset form fields
+        // Reset form fields after saving the data
         setYard("");
         setCustomerName("");
         setUnitNumber("");
