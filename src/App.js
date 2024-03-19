@@ -94,7 +94,7 @@ const App = () => {
       isNaN(size) ||
       isNaN(amount)
     ) {
-      // will Show error toast
+      // will Show toast error if validation fails
       return toast.error(
         "Please fill in all required fields with valid values."
       );
@@ -143,7 +143,7 @@ const App = () => {
         setRemarks("");
       })
       .catch((error) => {
-        // Show error toast
+        // Show error toast if saving in Database is failed
         // console.error("Error adding document: ", error);
         toast.error("Error saving data. Please try again.");
       });
