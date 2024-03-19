@@ -145,7 +145,7 @@ const App = () => {
       .catch((error) => {
         // Show error toast
         // console.error("Error adding document: ", error);
-        toast.success("Error saving data. Please try again.");
+        toast.error("Error saving data. Please try again.");
       });
   };
 
