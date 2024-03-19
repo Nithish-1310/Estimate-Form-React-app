@@ -143,7 +143,7 @@ const App = () => {
         setRemarks("");
       })
       .catch((error) => {
-        // Show error toast if saving in Database is failed
+        // Show error toast if saving in Database i failed
         // console.error("Error adding document: ", error);
         toast.error("Error saving data. Please try again.");
       });
