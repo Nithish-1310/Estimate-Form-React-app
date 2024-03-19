@@ -5,7 +5,7 @@ import { collection, addDoc } from "firebase/firestore";
 import "firebase/firestore";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./component.jsx/Header";
+import Header from "./components/Header";
 import {
   TextField,
   FormControl,
