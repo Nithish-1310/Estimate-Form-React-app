@@ -60,12 +60,14 @@ const Form = () => {
       setEstimateDate(selectedDate.toISOString().split("T")[0]);
     }
   };
+
+  //Handling the Agent field when yard =HK and customer name = Jack
   useEffect(() => {
     if (yard === "HK" && customerName === "JACK") {
       setAgent("Not Applicable");
       setAgentDisabled(true); // Disable agent field
     } else {
-      setAgent(""); // Reset agent if not applicable
+      setAgent(""); // Reset agent field (agent1,agent2,agent3)
       setAgentDisabled(false); // Enable agent field
     }
   }, [yard, customerName]);
@@ -142,7 +144,7 @@ const Form = () => {
       })
       .catch((error) => {
         // Show error toast
-        console.error("Error adding document: ", error);
+        // console.error("Error adding document: ", error);
         toast.success("Error saving data. Please try again.");
       });
   };
@@ -153,7 +155,7 @@ const Form = () => {
       <div className="formContainer">
         <Header active={active} handleSave={handleSave} />
 
-        <form id="form">
+        <section id="form">
           <div className="row-styling">
             <FormControl>
               {yard === "" ? (
@@ -382,7 +384,7 @@ const Form = () => {
               onChange={(e) => setRemarks(e.target.value)}
             />
           </div>
-        </form>
+        </section>
         <ToastContainer />
       </div>
     </div>
