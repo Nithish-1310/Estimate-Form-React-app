@@ -16,7 +16,7 @@ import {
   FormControlLabel,
 } from "@mui/material";
 
-const Form = () => {
+const App = () => {
   const [yard, setYard] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [agent, setAgent] = useState("");
@@ -390,4 +390,4 @@ const Form = () => {
     </div>
   );
 };
-export default Form;
+export default App;
